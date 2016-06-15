@@ -27,7 +27,7 @@
         <repository>
           <id>fusesource.m2</id>
           <name>FuseSource Community Release Repository</name>
-          <url>https://repo.fusesource.com/nexus/content/groups/public</url>
+          <url>http://10.1.2.4:8081/nexus/content/repositories/fusesource.m2/</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -39,7 +39,7 @@
         <repository>
           <id>fusesource.ea</id>
           <name>FuseSource Community Early Access Release Repository</name>
-          <url>https://repo.fusesource.com/nexus/content/groups/ea</url>
+          <url>http://10.1.2.4:8081/nexus/content/repositories/fusesource.ea/</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -51,7 +51,7 @@
         <repository>
           <id>redhat.ga</id>
           <name>Red Hat General Availability Repository</name>
-          <url>https://maven.repository.redhat.com/ga</url>
+          <url>http://10.1.2.4:8081/nexus/content/repositories/redhat.ga/</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -65,7 +65,7 @@
         <pluginRepository>
           <id>fusesource.m2</id>
           <name>FuseSource Community Release Repository</name>
-          <url>https://repo.fusesource.com/nexus/content/groups/public</url>
+          <url>http://10.1.2.4:8081/nexus/content/repositories/fusesource.m2/</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -77,7 +77,7 @@
         <pluginRepository>
           <id>fusesource.ea</id>
           <name>FuseSource Community Early Access Release Repository</name>
-          <url>https://repo.fusesource.com/nexus/content/groups/ea</url>
+          <url>http://10.1.2.4:8081/nexus/content/repositories/fusesource.ea/</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
@@ -89,7 +89,7 @@
         <pluginRepository>
           <id>redhat.ga</id>
           <name>Red Hat General Availability Repository</name>
-          <url>https://maven.repository.redhat.com/ga</url>
+          <url>http://10.1.2.4:8081/nexus/content/repositories/redhat.ga/</url>
           <snapshots>
             <enabled>false</enabled>
           </snapshots>
