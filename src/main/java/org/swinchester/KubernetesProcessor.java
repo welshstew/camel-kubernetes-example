@@ -18,13 +18,21 @@ public class KubernetesProcessor implements Processor {
 
     Logger log = LoggerFactory.getLogger(KubernetesProcessor.class);
 
-    DefaultKubernetesClient kubernetesClient = new DefaultKubernetesClient();
 
     @Override
     public void process(Exchange exchange) throws Exception {
+        DefaultKubernetesClient kubernetesClient = new DefaultKubernetesClient();
         log.info("calling kube api against " + kubeNS);
         PodList something = kubernetesClient.pods().inNamespace(kubeNS).list();
         exchange.getIn().setBody(something.toString());
         log.info("result is : " + something.toString());
+    }
+
+    public String getKubeNS() {
+        return kubeNS;
+    }
+
+    public void setKubeNS(String kubeNS) {
+        this.kubeNS = kubeNS;
     }
 }

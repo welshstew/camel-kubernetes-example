@@ -24,9 +24,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://camel.apache.org/schema/spring http://camel.apache.org/schema/spring/camel-spring.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <context:property-placeholder system-properties-mode="ENVIRONMENT" />
+  <context:property-placeholder location="client.properties" system-properties-mode="ENVIRONMENT" />
 
-  <bean id="kubeProcessor" class="org.swinchester.KubernetesProcessor" />
+  <bean id="kubeProcessor" class="org.swinchester.KubernetesProcessor">
+    <property name="kubeNS" value="${KUBERNETES_NAMESPACE}" />
+  </bean>
 
   <camelContext xmlns="http://camel.apache.org/schema/spring">
 
