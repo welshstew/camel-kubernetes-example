@@ -1,5 +1,6 @@
 package org.swinchester;
 
+import io.fabric8.kubernetes.api.model.PodList;
 import io.fabric8.kubernetes.client.DefaultKubernetesClient;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
@@ -22,8 +23,8 @@ public class KubernetesProcessor implements Processor {
     @Override
     public void process(Exchange exchange) throws Exception {
         log.info("calling kube api against " + kubeNS);
-        String something = kubernetesClient.inNamespace(kubeNS).lists().toString();
-        exchange.getIn().setBody(something);
-        log.info("result is : " + something);
+        PodList something = kubernetesClient.pods().inNamespace(kubeNS).list();
+        exchange.getIn().setBody(something.toString());
+        log.info("result is : " + something.toString());
     }
 }
